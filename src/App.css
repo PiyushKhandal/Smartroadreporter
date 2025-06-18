@@ -1,38 +1,112 @@
+/* Full height for html, body and root */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Flex container for whole app */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Header styling */
+header {
+  background-color: #003366;
   color: white;
+  padding: 20px 0;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* Navigation bar styling */
+nav {
+  margin-top: 10px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
 }
+
+nav a:hover {
+  color: #002244;
+}
+
+/* Main content grows to fill available space */
+main {
+  flex: 1 0 auto;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+h2 {
+  color: #003366;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form elements styling */
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="file"],
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #002244;
+}
+
+/* Message styling */
+.message {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #FF9933;
+  text-align: center;
+}
+
+/* Footer styling */
+footer {
+  flex-shrink: 0;
+  background-color: #003366;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px; /* 👈 यह जोड़ सकते हो */
+}
+
